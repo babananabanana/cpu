@@ -1,16 +1,29 @@
-<!doctype html>
-<p>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>login page</title>
-    <script src="js/login.js"></script>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <script language="JavaScript">
+    function userLogin()
+    {
+        document.testForm.action="userLogin.php";
+        document.testForm.submit();
+    }
+    function adminLogin()
+    {
+    document.testForm.action="adminLogin.php";
+    document.testForm.submit();
+    }
+    </script>
 </head>
-<p>
-<h1>compute&tech</h1>
-<form name="form1" action="">
-<p>username:<input type="text" name="username"/><p/>
-<p>password:<input type="password" name="password"/><p/>
-<input type="button" name="user" value="user" onclick="userLogin()">
-<input type="button" name="admin" value="admin" onclick="adminLogin()">
+<body>
+<form name="testForm" method="post" action="">
+    <input type="text" name="Name">
+    <input type="password" name="Password">
+    <input type="button" name="Submit1" value="userLogin" onClick="userLogin();">
+    <input type="button" name="Submit2" value="adminLogin" onClick="adminLogin();">
 </form>
+</body>
+</html>
 </body>
 </html>
